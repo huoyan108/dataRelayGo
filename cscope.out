@@ -1,0 +1,455 @@
+cscope 15 $HOMEgo/src/github.com/huoyan108/dataRelayGo -q 0000000049 0000002470
+	@appcommServer/routing.go
+
+27 
+·ckage
+ 
+R–yS”v”
+
+
+29 
+impÜt
+ (
+
+33 
+MQTT
+ "git.eclipse.org/gitroot/paho/org.eclipse.paho.mqtt.golang.git"
+
+36 
+v¬
+ 
+	gbrok”Lßd
+ = 
+	$make
+(
+chª
+ 
+boÞ
+)
+
+37 
+v¬
+ 
+brok”CÚÃùiÚ
+ = 
+	$make
+(
+chª
+ 
+boÞ
+)
+
+38 
+v¬
+ 
+brok”Cl›Ás
+ = 
+	$make
+(
+chª
+ 
+boÞ
+)
+
+40 
+func
+ 
+	$brok”LßdHªdËr
+(
+þ›Á
+ *
+MQTT
+.
+Cl›Á
+, 
+msg
+ MQTT.
+Mes§ge
+) {
+
+41 
+brok”Lßd
+ <- 
+Œue
+
+
+42 
+fmt
+.
+	`Prštf
+("BrokerLoadHandler ")
+
+43 
+fmt
+.
+	`Prštf
+("[%s] ", 
+msg
+.
+	`TÝic
+())
+
+44 
+fmt
+.
+	`Prštf
+("%s\n", 
+msg
+.
+	`Paylßd
+())
+
+46 
+fmt
+.
+	`Prštf
+("Reûived mes§gÚÝic: %s\nMes§ge: %s\n", 
+msg
+.
+	`TÝic
+(),msg.
+	`Paylßd
+())
+
+47 
+	}
+}
+
+49 
+func
+ 
+	$brok”CÚÃùiÚHªdËr
+(
+þ›Á
+ *
+MQTT
+.
+Cl›Á
+, 
+msg
+ MQTT.
+Mes§ge
+) {
+
+50 
+brok”CÚÃùiÚ
+ <- 
+Œue
+
+
+51 
+fmt
+.
+	`Prštf
+("BrokerConnectionHandler ")
+
+52 
+fmt
+.
+	`Prštf
+("[%s] ", 
+msg
+.
+	`TÝic
+())
+
+53 
+fmt
+.
+	`Prštf
+("%s\n", 
+msg
+.
+	`Paylßd
+())
+
+54 
+fmt
+.
+	`Prštf
+("Reûived mes§gÚÝic: %s\nMes§ge: %s\n", 
+msg
+.
+	`TÝic
+(),msg.
+	`Paylßd
+())
+
+55 
+	}
+}
+
+57 
+func
+ 
+	$brok”Cl›ÁsHªdËr
+(
+þ›Á
+ *
+MQTT
+.
+Cl›Á
+, 
+msg
+ MQTT.
+Mes§ge
+) {
+
+58 
+brok”Cl›Ás
+ <- 
+Œue
+
+
+59 
+fmt
+.
+	`Prštf
+("BrokerClientsHandler ")
+
+60 
+fmt
+.
+	`Prštf
+("[%s] ", 
+msg
+.
+	`TÝic
+())
+
+61 
+fmt
+.
+	`Prštf
+("%s\n", 
+msg
+.
+	`Paylßd
+())
+
+63 
+fmt
+.
+	`Prštf
+("Reûived mes§gÚÝic: %s\nMes§ge: %s\n", 
+msg
+.
+	`TÝic
+(),msg.
+	`Paylßd
+())
+
+64 
+	}
+}
+
+66 
+func
+ 
+	$AµCommUn™In™
+() {
+
+67 
+Ýts
+ :ð
+MQTT
+.
+	`NewCl›ÁO±iÚs
+().
+	`AddBrok”
+("tý://127.0.0.1:1883").
+	`S‘Cl›ÁID
+("router-sample")
+
+68 
+Ýts
+.
+	`S‘CËªSessiÚ
+(
+Œue
+)
+
+70 
+c
+ :ð
+MQTT
+.
+	`NewCl›Á
+(
+Ýts
+)
+
+71 
+tok’
+ :ð
+c
+.
+	`CÚÃù
+();ok’.
+	`Wa™
+(è&&ok’.
+	`E¼Ü
+(è!ð
+nž
+ {
+
+72 
+	`·nic
+(
+tok’
+.
+	`E¼Ü
+())
+
+75 
+tok’
+ :ð
+c
+.
+	`Subsüibe
+("logš", 0, 
+brok”LßdHªdËr
+);ok’.
+	`Wa™
+(è&&ok’.
+	`E¼Ü
+(è!ð
+nž
+ {
+
+76 
+fmt
+.
+	`PršŽn
+(
+tok’
+.
+	`E¼Ü
+())
+
+77 
+os
+.
+	`Ex™
+(1)
+
+90 
+lßdCouÁ
+ := 0
+
+91 
+cÚÃùiÚCouÁ
+ := 0
+
+92 
+þ›ÁsCouÁ
+ := 0
+
+94 
+i
+ := 0; i < 100; i++ {
+
+96 
+£Ëù
+ {
+
+98 <-
+brok”Lßd
+:
+
+99 
+lßdCouÁ
+++
+
+100 <-
+brok”CÚÃùiÚ
+:
+
+101 
+cÚÃùiÚCouÁ
+++
+
+102 <-
+brok”Cl›Ás
+:
+
+103 
+þ›ÁsCouÁ
+++
+
+107 
+fmt
+.
+	`Prštf
+("Reûived %3d Brok” Lßd mes§ges\n", 
+lßdCouÁ
+)
+
+108 
+fmt
+.
+	`Prštf
+("Reûived %3d Brok” CÚÃùiÚ mes§ges\n", 
+cÚÃùiÚCouÁ
+)
+
+109 
+fmt
+.
+	`Prštf
+("Reûived %3d Brok” Cl›Á mes§ges\n", 
+þ›ÁsCouÁ
+)
+
+111 
+c
+.
+	`DiscÚÃù
+(250)
+
+112 
+	}
+}
+
+	@main.go
+
+1 
+·ckage
+ 
+maš
+
+
+3 
+impÜt
+(
+
+9 
+func
+ 
+	$maš
+(){
+
+10 
+fmt
+.
+	`PršŽn
+("helloworld")
+
+11 
+R–yS”v”
+.
+	`AµCommUn™In™
+()
+
+14 
+	}
+}
+
+	@
+1
+.
+0
+2
+33
+appcommServer/routing.go
+main.go
