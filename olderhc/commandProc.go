@@ -45,10 +45,10 @@ const (
 
 // 控制返回结果
 const (
-	CONTROL_FAILURE = iota
+	CONTROL_FAILURE = 6
 	CONTROL_SUCCESS
-	BAD_PARAMETER
-	SERVER_FAILED
+	BAD_PARAMETER = 4
+	SERVER_FAILED = 5
 )
 
 type basic struct {

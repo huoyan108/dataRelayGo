@@ -80,7 +80,7 @@ func Receive(cs map[string]chan []*Report.Command_Param) {
             mapValue["devtype"]=strconv.Itoa(int(paras[1].Npara)) 
             mapValue["devid"]=strconv.Itoa(int(paras[2].Npara)) 
             mapValue["manufacturers"]=strconv.Itoa(int(paras[3].Npara)) 
-            
+            mapValue["devstate"]=strconv.Itoa(int(paras[4].Npara))            
 			jsonRes, _ = json.Marshal(mapValue)
             SendMsg(res.mac,string(jsonRes))
             

@@ -27,20 +27,23 @@ type Command_CommandType int32
 
 const (
 	// up message
-	Command_CMT_INVALID         Command_CommandType = 0
-	Command_CMT_REPLOGIN        Command_CommandType = 257
-	Command_CMT_REPONLINE       Command_CommandType = 258
-	Command_CMT_REPWARNUP       Command_CommandType = 259
-	Command_CMT_REPMACK         Command_CommandType = 260
-	Command_CMT_REPDEVICELIST   Command_CommandType = 261
-	Command_CMT_REPOPFEEDBACK   Command_CommandType = 262
-	Command_CMT_REPADDDELDEVICE Command_CommandType = 263
+	Command_CMT_INVALID          Command_CommandType = 0
+	Command_CMT_REPLOGIN         Command_CommandType = 257
+	Command_CMT_REPONLINE        Command_CommandType = 258
+	Command_CMT_REPWARNUP        Command_CommandType = 259
+	Command_CMT_REPMACK          Command_CommandType = 260
+	Command_CMT_REPDEVICELIST    Command_CommandType = 261
+	Command_CMT_REPOPFEEDBACK    Command_CommandType = 262
+	Command_CMT_REPADDDELDEVICE  Command_CommandType = 263
+	Command_CMT_REPSETDEVICENAME Command_CommandType = 264
 	// down message
-	Command_CMT_REQLOGIN      Command_CommandType = 33025
-	Command_CMT_REQONLINE     Command_CommandType = 33026
-	Command_CMT_REQWARNUP     Command_CommandType = 33027
-	Command_CMT_REQDEVICELIST Command_CommandType = 33029
-	Command_CMT_REQOP         Command_CommandType = 33030
+	Command_CMT_REQLOGIN         Command_CommandType = 33025
+	Command_CMT_REQONLINE        Command_CommandType = 33026
+	Command_CMT_REQWARNUP        Command_CommandType = 33027
+	Command_CMT_REQDEVICELIST    Command_CommandType = 33029
+	Command_CMT_REQOP            Command_CommandType = 33030
+	Command_CMT_REQSETDEVICENAME Command_CommandType = 33032
+	Command_CMT_REQCHANGEPASSWD  Command_CommandType = 33033
 )
 
 var Command_CommandType_name = map[int32]string{
@@ -52,26 +55,32 @@ var Command_CommandType_name = map[int32]string{
 	261:   "CMT_REPDEVICELIST",
 	262:   "CMT_REPOPFEEDBACK",
 	263:   "CMT_REPADDDELDEVICE",
+	264:   "CMT_REPSETDEVICENAME",
 	33025: "CMT_REQLOGIN",
 	33026: "CMT_REQONLINE",
 	33027: "CMT_REQWARNUP",
 	33029: "CMT_REQDEVICELIST",
 	33030: "CMT_REQOP",
+	33032: "CMT_REQSETDEVICENAME",
+	33033: "CMT_REQCHANGEPASSWD",
 }
 var Command_CommandType_value = map[string]int32{
-	"CMT_INVALID":         0,
-	"CMT_REPLOGIN":        257,
-	"CMT_REPONLINE":       258,
-	"CMT_REPWARNUP":       259,
-	"CMT_REPMACK":         260,
-	"CMT_REPDEVICELIST":   261,
-	"CMT_REPOPFEEDBACK":   262,
-	"CMT_REPADDDELDEVICE": 263,
-	"CMT_REQLOGIN":        33025,
-	"CMT_REQONLINE":       33026,
-	"CMT_REQWARNUP":       33027,
-	"CMT_REQDEVICELIST":   33029,
-	"CMT_REQOP":           33030,
+	"CMT_INVALID":          0,
+	"CMT_REPLOGIN":         257,
+	"CMT_REPONLINE":        258,
+	"CMT_REPWARNUP":        259,
+	"CMT_REPMACK":          260,
+	"CMT_REPDEVICELIST":    261,
+	"CMT_REPOPFEEDBACK":    262,
+	"CMT_REPADDDELDEVICE":  263,
+	"CMT_REPSETDEVICENAME": 264,
+	"CMT_REQLOGIN":         33025,
+	"CMT_REQONLINE":        33026,
+	"CMT_REQWARNUP":        33027,
+	"CMT_REQDEVICELIST":    33029,
+	"CMT_REQOP":            33030,
+	"CMT_REQSETDEVICENAME": 33032,
+	"CMT_REQCHANGEPASSWD":  33033,
 }
 
 func (x Command_CommandType) String() string {
